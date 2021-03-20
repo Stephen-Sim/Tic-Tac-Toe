@@ -49,7 +49,7 @@ int main()
 				sum = sum + sel[i];
 			}
 
-			if(sum == 0)
+			if(sum == 432)
 			{
 				cout << "Game Result: Draw Game!" << endl;
 				break;
