@@ -41,25 +41,26 @@ int main()
 				break;
 			}
 
+			int sum = 0;
+			for(int  i = 0; i < 9; i++)
+			{
+				sum = sum + arr[i];
+			}
+
+			if(sum == 747)
+			{
+				cout << "Game Result: Draw Game!" << endl;
+				break;
+			}
+
 			secondPly_input(arr);
 			win = win_condition(arr);
 			if(win != 0)
 			{
 				break;
 			}
-
-			int sum = 0;
-			for(int  i = 0; i < 9; i++)
-			{
-				sum = sum + arr[i];
-			}
-			cout << sum;
-
-			if(sum == 525)
-			{
-				cout << "Game Result: Draw Game!" << endl;
-				break;
-			}
+			
+			
 
 		}while(win == 0);
 
