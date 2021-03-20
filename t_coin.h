@@ -5,8 +5,6 @@ using namespace std;
 #ifndef T_COIN
 	#define T_COIN
 
-extern string Player1, Player2;
-
 bool throw_coin()
 {
 	int randNum = rand() % 101;
@@ -16,7 +14,7 @@ bool throw_coin()
 
 	do
 	{
-		cout << Player1 << " please enter the guess (H/ T): ";
+		cout << "One of the players, please enter the guess (H/ T): ";
 		cin >> guessFace;
 		guessFace = toupper(guessFace);
 	}while(guessFace != 'T' && guessFace != 'H');
@@ -26,12 +24,12 @@ bool throw_coin()
 		cout << "It is Head." << endl;
 		if(guessFace == 'H')
 		{
-			cout << Player1 << " starts first." << endl;
+			cout << "Congrats, you starts first." << endl;
 			return true;
 		}
 		else 
 		{
-			cout << "Unfortunately, " << Player2 << " starts first." << endl;
+			cout << "Unfortunately, the oppenent starts first." << endl;
 			return false;
 		}
 	}
@@ -40,12 +38,12 @@ bool throw_coin()
 		cout << "It is Tail." << endl;
 		if(guessFace == 'T')
 		{
-			cout << Player1 << " starts first." << endl;
+			cout << "Congrats, you starts first." << endl;
 			return true;
 		}
 		else 
 		{
-			cout << "Unfortunately, " << Player2 << " starts first." << endl;
+			cout << "Unfortunately, the oppenent starts first." << endl;
 			return false;
 		}
 	}

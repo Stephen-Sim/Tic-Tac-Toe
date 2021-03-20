@@ -7,12 +7,9 @@ using namespace std;
 
 #define SIZE 3
 
-string Player1, Player2;
-
 int main()
 {
 	cout << "Welcome to Stephen\'s Tic Tac Toe Game" << endl;
-	playerName(Player1, Player2);
 	char toContinue;
 	do
 	{
@@ -29,6 +26,7 @@ int main()
 
 		bool start_first;
 		start_first = throw_coin();
+		cout << "The player 1 uses \'O\', the player 2 uses \'X\'." << endl;
 
 		int win = 0;
 		do
@@ -66,11 +64,11 @@ int main()
 
 		if(win == 1)
 		{
-			cout << "Congratulation, " << Player1 << " win the game.\n" << endl;
+			cout << "Congratulation, player 1 wins the game.\n" << endl;
 		}
 		else if(win == 2)
 		{
-			cout << "Congratulation, " << Player2 << " win the game.\n" << endl;
+			cout << "Congratulation, player 2 wins the game.\n" << endl;
 		}
 
 		cout << "Do you want to continue(Y/N): ";

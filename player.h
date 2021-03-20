@@ -5,15 +5,6 @@ using namespace std;
 #ifndef PLAYER
 	#define PLAYER
 // the first player uses 'O' and the second player uses 'X'
-void playerName(string &Player1, string &Player2)
-{
-	cout << "Player1, please enter the name: ";
-	getline(cin, Player1);
-
-	cout << "Player2, please enter the name: ";
-	getline(cin, Player2);
-}
-
 char input_pos()
 {
 	char input;
@@ -50,7 +41,7 @@ char check_taken(char arr[9])
 void firstPly_input(char arr[9]) // 'O'
 {
 	char f;
-	cout << "Player1 ";
+	cout << "Player 1 ";
 	f = check_taken(arr);
 
 	for(int i = 0; i < 9; i++)
@@ -68,7 +59,7 @@ void firstPly_input(char arr[9]) // 'O'
 void secondPly_input(char arr[9]) // 'X'
 {
 	char s;
-	cout << "Player2 ";
+	cout << "Player 2 ";
 	s = check_taken(arr);
 	for(int i = 0; i < 9; i++)
 	{
