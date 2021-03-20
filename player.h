@@ -25,13 +25,13 @@ char check_taken(char sel[9])
 
 	for(int i = 1; i <= 9; i++) 
 	{	
-		if(input == 48 + i && sel[i] == '0')
+		if(input == (48 + i) && sel[i] == '0')
 		{
 			cout << "The position is taken.";
 			input = check_taken(sel);
 		}
 		
-		if(input == 48 + i && sel[i] != '0') // 48 == 0 in char
+		if(input == (48 + i) && sel[i] != '0') // 48 == 0 in char
 		{
 			sel[i] = '0';
 			return input;
