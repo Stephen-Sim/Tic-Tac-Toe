@@ -37,7 +37,7 @@ char check_taken(char arr[9])
 		if(input == (48 + i) && (arr[i - 1] == 'O' || arr[i - 1] == 'X'))
 		{
 			cout << "The position is taken.";
-			//input = check_taken(sel);
+			input = check_taken(arr);
 		}
 		
 		if(input == (48 + i) && !(arr[i - 1] == 'O' || arr[i - 1] == 'X')) // 48 == 0 in char
@@ -52,17 +52,6 @@ void firstPly_input(char arr[9]) // 'O'
 	char f;
 	cout << "Player1 ";
 	f = check_taken(arr);
-
-	/*for(int i = 0; i < 3; i++)
-	{
-		for(int j = 0; i < 3; j++)
-		{
-			if(f == arr[i][j])
-			{
-				arr[i][j] = 'O';
-			}
-		}
-	}*/
 
 	for(int i = 0; i < 9; i++)
 	{

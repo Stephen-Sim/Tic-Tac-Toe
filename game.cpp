@@ -17,12 +17,6 @@ int main()
 	do
 	{
 		srand(time(NULL));
-/*		char arr[SIZE][SIZE] = 
-		{
-			{'1', '2', '3'},
-			{'4', '5', '6'},
-			{'7', '8', '9'}
-		};*/
 
 		char arr[9] = 
 		{
