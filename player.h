@@ -21,15 +21,15 @@ char check_taken(char sel[9])
 	cin >> input;
 	for(int i = 1; i <= 9; i++)
 	{	
-		if(input == i && sel[i] == 0)
+		if(input == i && sel[i] == '0')
 		{
 			cout << "The position is taken.";
 			input = check_taken(sel);
 		}
 		
-		if(input == i && sel[i] != 0)
+		if(input == i && sel[i] != '0')
 		{
-			sel[i] = 0;
+			sel[i] = '0';
 			return input;
 		}
 	}
@@ -39,6 +39,7 @@ void firstPly_input(char arr[3][3], char sel[9]) // 'O'
 {
 	char f;
 	f = check_taken(sel);
+
 	for(int i = 0; i < 3; i++)
 	{
 		for(int j = 0; i < 3; j++)
@@ -57,6 +58,7 @@ void secondPly_input(char arr[3][3], char sel[9]) // 'X'
 {
 	char s;
 	s = check_taken(sel);
+	
 	for(int i = 0; i < 3; i++)
 	{
 		for(int j = 0; i < 3; j++)

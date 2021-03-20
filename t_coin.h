@@ -13,8 +13,11 @@ bool throw_coin()
 
 	cout << "A coin is throwing.." << endl;
 	cout << Player1 << " please enter the guess (H/ T): ";
-	cin >> guessFace;
-	guessFace = toupper(guessFace);
+	do
+	{
+		cin >> guessFace;
+		guessFace = toupper(guessFace);
+	}while(guessFace != 'T' && guessFace != 'H');
 
 	if(randNum % 2 == 0) // Head
 	{
@@ -35,12 +38,12 @@ bool throw_coin()
 		cout << "It is Tail." << endl;
 		if(guessFace == 'T')
 		{
-			cout << Player1 << " starts first.";
+			cout << Player1 << " starts first." << endl;
 			return true;
 		}
 		else 
 		{
-			cout << "Unfortunately, " << Player2 << " starts first.";
+			cout << "Unfortunately, " << Player2 << " starts first." << endl;
 			return false;
 		}
 	}

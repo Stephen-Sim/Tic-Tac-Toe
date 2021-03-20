@@ -57,7 +57,7 @@ int main()
 
 		}while(win == 0);
 
-		if(win = 2)
+		if(win == 1)
 		{
 			cout << "Congratulation, " << Player1 << "win the game." << endl;
 		}
@@ -68,6 +68,7 @@ int main()
 
 		cout << "Do you want to continue(Y/N): ";
 		cin >> toContinue;
+
 	}while(toContinue == 'Y');
 
 	return 0;
