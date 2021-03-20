@@ -8,7 +8,8 @@
 ## 4. At first, a coin will be thrown and player is asked to guess the face of the coin (HEAD / TAIL)
 	One of the players will be asked to guess the coin, if he is correct he start the game first,
 	otherwise, the opponent will start game first
-	the player who starts first is the player 1 and the opponent will become player 2![Annotation 2021-03-21 004349](https://user-images.githubusercontent.com/74543535/111877565-e2751100-89de-11eb-8425-066ec6bb145f.jpg)
+	the player who starts first is the player 1 and the opponent will become player 2!
+	[Annotation 2021-03-21 004349](https://user-images.githubusercontent.com/74543535/111877565-e2751100-89de-11eb-8425-066ec6bb145f.jpg)
 
 ## 5. After the game is ended, players will be asked to continue.
 ![Annotation 2021-03-21 004810](https://user-images.githubusercontent.com/74543535/111877634-2405bc00-89df-11eb-96b5-98f3528ce922.jpg)
