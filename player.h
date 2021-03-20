@@ -17,8 +17,12 @@ void playerName(string &Player1, string &Player2)
 char check_taken(char sel[9])
 {
 	char input;
-	cout << "Enter the position: ";
-	cin >> input;
+	do
+	{
+		cout << "Enter the position: ";
+		cin >> input;
+	}while(input <= 48 && input >= 58);
+
 	for(int i = 1; i <= 9; i++) 
 	{	
 		if(input == 48 + i && sel[i] == '0')
@@ -51,7 +55,7 @@ void firstPly_input(char arr[3][3], char sel[9]) // 'O'
 		}
 	}
 	output_arr(arr);
-
+	cout << endl;
 }
 
 void secondPly_input(char arr[3][3], char sel[9]) // 'X'
@@ -70,6 +74,7 @@ void secondPly_input(char arr[3][3], char sel[9]) // 'X'
 		}
 	}
 	output_arr(arr);
+	cout << endl;
 }
 
 #endif
