@@ -28,32 +28,32 @@ char input_pos()
 
 }
 
-char check_taken(char sel[9])
+char check_taken(char arr[9])
 {
 	char input = input_pos();
 
 	for(int i = 1; i <= 9; i++) 
 	{	
-		if(input == (48 + i) && sel[i - 1] == '0')
+		if(input == (48 + i) && (arr[i - 1] == 'O' || arr[i - 1] == 'X'))
 		{
 			cout << "The position is taken.";
 			//input = check_taken(sel);
 		}
 		
-		if(input == (48 + i) && sel[i - 1] != '0') // 48 == 0 in char
+		if(input == (48 + i) && !(arr[i - 1] == 'O' || arr[i - 1] == 'X')) // 48 == 0 in char
 		{
-			sel[i] = '0';
 			return input;
 		}
 	}
 }
 
-void firstPly_input(char arr[3][3], char sel[9]) // 'O'
+void firstPly_input(char arr[9]) // 'O'
 {
 	char f;
-	f = check_taken(sel);
+	cout << "Player1 ";
+	f = check_taken(arr);
 
-	for(int i = 0; i < 3; i++)
+	/*for(int i = 0; i < 3; i++)
 	{
 		for(int j = 0; i < 3; j++)
 		{
@@ -62,24 +62,30 @@ void firstPly_input(char arr[3][3], char sel[9]) // 'O'
 				arr[i][j] = 'O';
 			}
 		}
+	}*/
+
+	for(int i = 0; i < 9; i++)
+	{
+		if(f == arr[i])
+		{
+			arr[i] = 'O';
+		}
 	}
+
 	output_arr(arr);
 	cout << endl;
 }
 
-void secondPly_input(char arr[3][3], char sel[9]) // 'X'
+void secondPly_input(char arr[9]) // 'X'
 {
 	char s;
-	s = check_taken(sel);
-
-	for(int i = 0; i < 3; i++)
+	cout << "Player2 ";
+	s = check_taken(arr);
+	for(int i = 0; i < 9; i++)
 	{
-		for(int j = 0; i < 3; j++)
+		if(s == arr[i])
 		{
-			if(s == arr[i][j])
-			{
-				arr[i][j] = 'X';
-			}
+			arr[i] = 'X';
 		}
 	}
 	output_arr(arr);

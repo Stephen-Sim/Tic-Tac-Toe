@@ -1,20 +1,23 @@
 #include <iostream>
 using namespace std;
 
-#define SIZE 3
-
 #ifndef OUTPUT_ARR
 	#define OUTPUT_ARR
 
-void output_arr(char arr[SIZE][SIZE])
+void output_arr(char arr[9])
 {
-	for(int i = 0; i < SIZE; i++)
+	for(int i = 1; i <= 9; i++)
 	{
-		for(int j = 0; j < SIZE; j++)
+		cout << arr[i - 1];
+		if(i % 3 == 0)
 		{
-			cout << arr[i][j] << "  ";
+			cout << endl;
 		}
-		cout << endl;
+		else 
+		{
+			cout << " ";
+		}
+
 	}
 }
 

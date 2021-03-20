@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include "player.h"
 #include "t_coin.h"
 #include "check_win.h"
@@ -17,14 +17,14 @@ int main()
 	do
 	{
 		srand(time(NULL));
-		char arr[SIZE][SIZE] = 
+/*		char arr[SIZE][SIZE] = 
 		{
 			{'1', '2', '3'},
 			{'4', '5', '6'},
 			{'7', '8', '9'}
-		};
+		};*/
 
-		char sel[9] = 
+		char arr[9] = 
 		{
 			'1', '2', '3',
 			'4', '5', '6',
@@ -39,14 +39,25 @@ int main()
 		int win = 0;
 		do
 		{
-			firstPly_input(arr, sel);
-			secondPly_input(arr, sel);
+			firstPly_input(arr);
 			win = win_condition(arr);
+
+			if(win != 0)
+			{
+				break;
+			}
+
+			secondPly_input(arr);
+			win = win_condition(arr);
+			if(win != 0)
+			{
+				break;
+			}
 
 			int sum = 0;
 			for(int  i = 0; i < 9; i++)
 			{
-				sum = sum + sel[i];
+				sum = sum + arr[i];
 			}
 
 			if(sum == 432)
@@ -59,11 +70,11 @@ int main()
 
 		if(win == 1)
 		{
-			cout << "Congratulation, " << Player1 << "win the game." << endl;
+			cout << "Congratulation, " << Player1 << " win the game.\n" << endl;
 		}
 		else if(win == 2)
 		{
-			cout << "Congratulation, " << Player2 << "win the game." << endl;
+			cout << "Congratulation, " << Player2 << " win the game.\n" << endl;
 		}
 
 		cout << "Do you want to continue(Y/N): ";
