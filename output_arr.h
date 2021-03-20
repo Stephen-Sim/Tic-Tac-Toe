@@ -18,6 +18,4 @@ void output_arr(char arr[SIZE][SIZE])
 	}
 }
 
-
-
 #endif

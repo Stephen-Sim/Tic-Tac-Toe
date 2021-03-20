@@ -21,12 +21,12 @@ bool throw_coin()
 		cout << "It is Head." << endl;
 		if(guessFace == 'H')
 		{
-			cout << Player1 << " starts first.";
+			cout << Player1 << " starts first." << endl;
 			return true;
 		}
 		else 
 		{
-			cout << "Unfortunately, " << Player2 << " starts first.";
+			cout << "Unfortunately, " << Player2 << " starts first." << endl;
 			return false;
 		}
 	}
