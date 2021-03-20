@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 // the first player uses 'O' and the second player uses 'X'
 #ifndef CHECK_WIN
 	#define CHECK_WIN

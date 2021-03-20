@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <ctype.h>
 using namespace std;
 
 #ifndef T_COIN
@@ -12,7 +13,7 @@ bool throw_coin()
 	char guessFace;
 
 	cout << "A coin is throwing.." << endl;
-	
+
 	do
 	{
 		cout << Player1 << " please enter the guess (H/ T): ";

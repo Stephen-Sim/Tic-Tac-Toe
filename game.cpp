@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 #include "player.h"
 #include "t_coin.h"
 #include "check_win.h"
