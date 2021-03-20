@@ -71,10 +71,18 @@ int main()
 			cout << "Congratulation, player 2 wins the game.\n" << endl;
 		}
 
-		cout << "Do you want to continue(Y/N): ";
-		cin >> toContinue;
+		do
+		{
+			cout << "Do you want to continue(Y/N): ";
+			cin >> toContinue;
+			toContinue = toupper(toContinue);
+		}while(!(toContinue == 'Y' || toContinue == 'N'));
+
+		cout << endl;
 
 	}while(toContinue == 'Y');
+
+	cout << "Thank you guys for playing this game !!! " << endl;
 
 	return 0;
 }
