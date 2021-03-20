@@ -9,7 +9,8 @@
 	One of the players will be asked to guess the coin, if he is correct he start the game first,
 	otherwise, the opponent will start game first
 	the player who starts first is the player 1 and the opponent will become player 2!
-![Annotation 2021-03-21 004349](https://user-images.githubusercontent.com/74543535/111877685-56171e00-89df-11eb-92e3-8ea0e61ccf8b.jpg)
+![Annotation 2021-03-21 005535](https://user-images.githubusercontent.com/74543535/111877875-43e9af80-89e0-11eb-82d8-287c1ec0a384.jpg)
+
 
 ## 5. After the game is ended, players will be asked to continue.
 ![Annotation 2021-03-21 004810](https://user-images.githubusercontent.com/74543535/111877634-2405bc00-89df-11eb-96b5-98f3528ce922.jpg)
