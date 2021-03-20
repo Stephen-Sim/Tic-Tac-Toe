@@ -12,9 +12,10 @@ bool throw_coin()
 	char guessFace;
 
 	cout << "A coin is throwing.." << endl;
-	cout << Player1 << " please enter the guess (H/ T): ";
+	
 	do
 	{
+		cout << Player1 << " please enter the guess (H/ T): ";
 		cin >> guessFace;
 		guessFace = toupper(guessFace);
 	}while(guessFace != 'T' && guessFace != 'H');
