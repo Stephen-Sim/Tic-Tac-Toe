@@ -53,8 +53,9 @@ int main()
 			{
 				sum = sum + arr[i];
 			}
+			cout << sum;
 
-			if(sum == 432)
+			if(sum == 525)
 			{
 				cout << "Game Result: Draw Game!" << endl;
 				break;
