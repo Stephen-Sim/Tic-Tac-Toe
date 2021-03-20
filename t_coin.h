@@ -1,21 +1,48 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define SIZE 3
-
 #ifndef T_COIN
 	#define T_COIN
 
+extern string Player1, Player2;
 
-void output_arr(char arr[SIZE][SIZE])
+bool throw_coin()
 {
-	for(int i = 0; i < SIZE; i++)
+	int randNum = rand() % 101;
+	char guessFace;
+
+	cout << "A coin is throwing.." << endl;
+	cout << Player1 << " please enter the guess (H/ T): ";
+	cin >> guessFace;
+	guessFace = toupper(guessFace);
+
+	if(randNum % 2 == 0) // Head
 	{
-		for(int j = 0; j < SIZE; j++)
+		cout << "It is Head." << endl;
+		if(guessFace == 'H')
 		{
-			cout << arr[i][j] << "  ";
+			cout << Player1 << " starts first.";
+			return true;
 		}
-		cout << endl;
+		else 
+		{
+			cout << "Unfortunately, " << Player2 << " starts first.";
+			return false;
+		}
+	}
+	else // Tail
+	{
+		cout << "It is Tail." << endl;
+		if(guessFace == 'T')
+		{
+			cout << Player1 << " starts first.";
+			return true;
+		}
+		else 
+		{
+			cout << "Unfortunately, " << Player2 << " starts first.";
+			return false;
+		}
 	}
 }
 
