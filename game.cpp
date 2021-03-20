@@ -5,8 +5,6 @@
 #include "output_arr.h"
 using namespace std;
 
-#define SIZE 3
-
 int main()
 {
 	cout << "Welcome to Stephen\'s Tic Tac Toe Game" << endl;
