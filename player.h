@@ -14,21 +14,30 @@ void playerName(string &Player1, string &Player2)
 	getline(cin, Player2);
 }
 
-char check_taken(char sel[9])
+char input_pos()
 {
 	char input;
 	do
 	{
 		cout << "Enter the position: ";
 		cin >> input;
+
 	}while(input <= 48 && input >= 58);
+
+	return input;
+
+}
+
+char check_taken(char sel[9])
+{
+	char input = input_pos();
 
 	for(int i = 1; i <= 9; i++) 
 	{	
 		if(input == (48 + i) && sel[i - 1] == '0')
 		{
 			cout << "The position is taken.";
-			input = check_taken(sel);
+			//input = check_taken(sel);
 		}
 		
 		if(input == (48 + i) && sel[i - 1] != '0') // 48 == 0 in char
