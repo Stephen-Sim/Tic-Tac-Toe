@@ -9,9 +9,9 @@ int main()
 {
 	cout << "Welcome to Stephen\'s Tic Tac Toe Game" << endl;
 	char toContinue;
+	srand(time(NULL));
 	do
 	{
-		srand(time(NULL));
 
 		char arr[9] = 
 		{
