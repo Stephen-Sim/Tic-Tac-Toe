@@ -1,8 +1,8 @@
 <?php
 
 	$serverName = "localhost";
-	$dbUsername = "root";
-	$dbPassword = "";
+	$dbUsername = "d032010243";
+	$dbPassword = "021121100386";
 	$dbName = "student_d032010243";
 
 	
@@ -17,43 +17,42 @@
 		
 	if (!$conn) {
   		die("Connection failed: " . mysqli_connect_error());
-	}
+	}	
 
-
-if($fullname == "" || $age == "" || $username == "" || $pass1 == "" || $pass2 == ""){
+if($fullname = "" || $age = "" || $username = "" || $pass1 = "" || $pass2 = ""){
 
 	if(empty($_POST['fullname']) || empty($_POST['age']) || empty($_POST['username']) || empty($_POST['pass1']) || empty($_POST['pass2'])){
 			echo "You have not filled up the form completely or correctly. Please try again<br>";
 	}
 
-	if($_POST['pass1'] !== $_POST['pass2']){
+	else
+	{
+			
+		if($_POST['age'] >= '30'){
+			$type = "SENIOR MEMBERSHIP";
+		}
+		elseif($_POST['age'] >= '18' && $_POST['age'] <= '29'){
+			$type = "REGULAR MEMBERSHIP";
+		}
+		elseif($_POST['age'] <= '17'){
+			$type = "JUNIOR MEMBERSHIP";
+		}
+
+		if($_POST['pass1'] !== $_POST['pass2']){
 			echo "Passwords do not match";
-	}
+		}
+		else{
+			$capital_fullname = strtoupper($_POST['fullname']);
 
-}
-else
-{
-		
-	if($_POST['age'] >= '30'){
-		$type = "SENIOR MEMBERSHIP";
-	}
-	elseif($_POST['age'] >= '18' && $_POST['age'] <= '29'){
-		$type = "REGULAR MEMBERSHIP";
-	}
-	elseif($_POST['age'] <= '17'){
-		$type = "JUNIOR MEMBERSHIP";
-	}
+			$sql = "INSERT INTO club (fullname, age, username, pass1, type) VALUES ('$fullname', '$age', '$username', '$pass1', '$type')";
 
+			echo "Data Inserted!";
+			echo "<br>";
+			echo "<br>";
+		}
 	
-	$capital_fullname = strtoupper($_POST['fullname']);
+	}
 
-	$sql = "INSERT INTO club (name, age, username, password, type) VALUES ('$capital_fullname', $age, '$username', '$pass1', '$type')";
-
-	mysqli_query($conn, $sql) or die("Insert Failed");
-
-	echo "Data Inserted!";
-	echo "<br>";
-	echo "<br>";
 }
 
 
@@ -89,7 +88,7 @@ else
 
 					echo "<tr>";
 						echo "<td>". $count ."</td>";
-						echo "<td>". $row['name']."</td>";
+						echo "<td>". $row['fullname']."</td>";
 						echo "<td>". $row['age']."</td>";
 						echo "<td>". $row['type']."</td>";
 					echo "</tr>";
