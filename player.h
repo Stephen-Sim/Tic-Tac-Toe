@@ -2,6 +2,8 @@
 #include "output_arr.h"
 using namespace std;
 
+#define validCondi input <= 48 || input >= 58
+
 #ifndef PLAYER
 	#define PLAYER
 // the first player uses 'O' and the second player uses 'X'
@@ -13,7 +15,11 @@ char input_pos()
 		cout << "Enter the position: ";
 		cin >> input;
 
-	}while(input <= 48 && input >= 58);
+		if(validCondi)
+		{
+			cout << "Invalid input. ";
+		}
+	}while(validCondi);
 
 	return input;
 
