@@ -43,7 +43,7 @@ int main()
 				sum = sum + arr[i];
 			}
 
-			if(sum == 747) // O * 5 X * 4
+			if(sum == 747) // O * 5 X * 4 <3
 			{
 				cout << "Game Result: Draw Game!" << endl;
 				break;
