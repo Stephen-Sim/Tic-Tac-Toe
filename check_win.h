@@ -68,7 +68,7 @@ int win_condition(char arr[9])
 	{
 		return 2;
 	}
-	return 0; // keep continue
+	return 0; // keep continue <3
 }
 
 #endif
